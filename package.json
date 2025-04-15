@@ -1,46 +1,33 @@
 {
-  "name": "@tacxtv/obs-for-ocelot",
-  "version": "0.0.1",
-  "repository": "https://github.com/tacxtv/obs-for-ocelot.git",
-  "author": "Tacx <12997062+tacxou@users.noreply.github.com>",
-  "private": true,
-  "scripts": {
-    "clean": "rimraf node_modules .nuxt .output dist",
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "start": "node .output/server/index.mjs",
-    "start:prod": "node start.mjs",
-    "test": "nuxi test",
-    "test:watch": "nuxi test --dev --watch",
-    "lint": "yarn lint:js && yarn lint:prettier",
-    "lint:js": "eslint --ext \\\"**/*{.js,.ts,.vue}\\\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --check src/",
-    "lint:fix": "./node_modules/.bin/prettier --write --list-different . && yarn lint:js --fix"
-  },
-  "packageManager": "yarn@1.22.0",
-  "engines": {
-    "node": ">=16.0.0",
-    "yarn": ">=1.22.0"
-  },
-  "dependencies": {
-    "firebase": "^10.5.0",
-    "sass": "^1.69.4",
-    "vuefire": "^3.1.17"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18.18.0",
-    "eslint": "^8.49.0",
-    "nuxt": "~3.6.5",
-    "prettier": "^3.0.3",
-    "rimraf": "^4.4.0",
-    "typescript": "^4.9.5",
-    "vite-plugin-pug": "^0.3.2"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.47"
-  }
+    "name": "@tacxtv/telethon",
+    "version": "1.0.0",
+    "repository": "https://github.com/tacxtv/telethon.git",
+    "author": "Tacx <12997062+tacxticx88@users.noreply.github.com>",
+    "private": true,
+    "scripts": {
+        "serve": "parcel serve src/*.html --lazy",
+        "build": "parcel build src/*.html --public-url ./",
+        "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup",
+        "add-domain": "echo \"telethontips.tacxtv.fr\" > dist/CNAME",
+        "cp-static": "cp -r static/* dist/"
+    },
+    "dependencies": {
+        "add": "^2.0.6",
+        "alpinejs": "^3.10.4",
+        "dayjs": "^1.11.5",
+        "typescript": "^4.8.4"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.186",
+        "parcel": "^2.7.0",
+        "parcel-plugin-static-files-copy": "^2.6.0",
+        "push-dir": "^0.4.1"
+    },
+    "staticFiles": {
+        "watcherGlob": "**",
+        "staticPath": [
+            "static"
+        ]
+    },
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,13 +1,5 @@
-.output/
-.data/
-.nuxt/
-.nitro/
-.cache/
+build/
+.parcel-cache/
+.idea/
 dist/
 node_modules/
-.DS_Store/
-.fleet
-.idea/
-.env
-.env.*
-!.env.example

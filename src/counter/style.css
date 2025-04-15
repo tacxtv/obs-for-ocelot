@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    /*font-family: 'Caveat Brush', cursive;*/
+    font-family: 'Montserrat', sans-serif;
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;
+}
+
+#block {
+    flex: 1;
+    /*margin: 5%;*/
+}
+
+img {
+    width: 58vw;
+}
+
+svg {
+    filter: drop-shadow(10px 10px #0005);
+}
+
+#text {
+    text-align: center;
+    font-size: 16vw;
+    /*font-size: 32vw;*/
+    color: #F9C81D;
+    font-weight: 800;
+    text-shadow: 10px 10px #0005;
+    white-space: nowrap;
+}
